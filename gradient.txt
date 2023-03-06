@@ -1,0 +1,35 @@
+import React from 'react';
+import LinearGradient from 'react-native-linear-gradient';
+import {View, Text, StyleSheet} from 'react-native';
+
+function App() {
+  return (
+    <>
+      <View style={styles.Wrap}>
+        <LinearGradient
+          start={{x: 0.0, y: 0.25}}
+          end={{x: 0.5, y: 1.0}}
+          locations={[0.2, 0.5, 1]}
+          colors={['#e08aed', '#F54242', '#05f6fa']}
+          style={styles.linearGradient}>
+          <Text>ABHAY</Text>
+        </LinearGradient>
+      </View>
+    </>
+  );
+}
+
+var styles = StyleSheet.create({
+  linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5,
+  },
+  Wrap: {
+    margin: 40,
+    height: 30,
+  },
+});
+
+export default App;
